@@ -33,6 +33,9 @@
 
 * Based on course from Udemy: Instructors - Rob Percival & Mashrur Hossain
 
+##### Notes
+  - [https://github.com/bokmann/font-awesome-rails](https://github.com/bokmann/font-awesome-rails)
+
 #### Potentially unneeded files
 
 - app/helpers/welcome_helper.rb
