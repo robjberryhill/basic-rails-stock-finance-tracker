@@ -5,8 +5,17 @@ class Stock < ApplicationRecord
       endpoint: "https://sandbox.iexapis.com/v1",
     )
     # client.price(ticker_symbol)
-    new(ticker: ticker_symbol,
-        name: client.company(ticker_symbol).company_name,
-        last_price: client.price(ticker_symbol))
+
+    # Begin the API call..
+    begin
+      # If API is success then return the following object.
+      new(ticker: ticker_symbol,
+          name: client.company(ticker_symbol).company_name,
+          last_price: client.price(ticker_symbol))
+
+    # If an exception is returned the handle it.
+    rescue => exception
+      return nil
+    end
   end
 end

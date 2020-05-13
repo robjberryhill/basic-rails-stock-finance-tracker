@@ -24,12 +24,19 @@
   - This particular api is [IEX Cloud](https://iexcloud.io/) Financial Data
   - [https://github.com/dblock/iex-ruby-client](https://github.com/dblock/iex-ruby-client)
 
+- Handle API exceptions.
+  - `stock.rb`, `stocks_controller.rb` - A basic handling of the exception.
+
 - Using `credentials.yml.enc` & `master.key`.
   - `rails credentials:edit` - To specify VS Code - `EDITOR="code --wait" rails credentials:edit`
   - `Rails.application.credentials.key_name[:value]`
 
 - Stock Model
   - `rails g model Stock ticker:string name:string last_price:decimal`
+
+- Using ajax
+  - `my_portfolio.html.erb`, `_stock_result.js.erb`, `stocks_controller.rb`
+  - `remote: true`
 
 * Based on course from Udemy: Instructors - Rob Percival & Mashrur Hossain
 
