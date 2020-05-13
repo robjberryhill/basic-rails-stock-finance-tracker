@@ -20,6 +20,17 @@
   - `yarn add bootstrap@4.3.1 jquery popper.js`
   - `application.css`, `environment.js`, `custom.css.scss`, `application.js`
 
+- Intergrating API
+  - This particular api is [IEX Cloud](https://iexcloud.io/) Financial Data
+  - [https://github.com/dblock/iex-ruby-client](https://github.com/dblock/iex-ruby-client)
+
+- Using `credentials.yml.enc` & `master.key`.
+  - `rails credentials:edit` - To specify VS Code - `EDITOR="code --wait" rails credentials:edit`
+  - `Rails.application.credentials.key_name[:value]`
+
+- Stock Model
+  - `rails g model Stock ticker:string name:string last_price:decimal`
+
 * Based on course from Udemy: Instructors - Rob Percival & Mashrur Hossain
 
 #### Potentially unneeded files
