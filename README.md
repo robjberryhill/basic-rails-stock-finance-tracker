@@ -1,4 +1,5 @@
 # Stock & Finance Tracker
+* Dependency and security updates not supported.
 
 #### Versions
 
@@ -9,21 +10,15 @@
 
 - Configuration
 
-- Database creation
-
-- Database initialization
-
-- How to run the test suite
-
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...
-
 ### App Covers:
 
 - [Devise](https://rubygems.org/gems/devise/versions/4.2.0) Flexible authentication solution for Rails with Warden.
+  - `gem "devise"`
+  - [https://github.com/hisea/devise-bootstrap-views](https://github.com/hisea/devise-bootstrap-views)
+
+- [Bootstrap](https://getbootstrap.com/) CSS Library
+  - `yarn add bootstrap@4.3.1 jquery popper.js`
+  - `application.css`, `environment.js`, `custom.css.scss`, `application.js`
 
 * Based on course from Udemy: Instructors - Rob Percival & Mashrur Hossain
 
