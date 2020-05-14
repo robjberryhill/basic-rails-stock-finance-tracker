@@ -10,7 +10,7 @@ class StocksController < ApplicationController
         respond_to do |format|
           # This will expect a js.erb file at this location.
           # This will render the partial without reloading the page.
-          format.js { render partial: "users/stock_result" }
+          format.js { render partial: "stocks/stock_result" }
         end
         # with no js you will need to load a page.
         # render view
@@ -20,7 +20,7 @@ class StocksController < ApplicationController
       else
         respond_to do |format|
           flash.now[:alert] = "Please enter a valid symbol to search."
-          format.js { render partial: "users/stock_result" }
+          format.js { render partial: "stocks/stock_result" }
         end
 
         # If not using js
@@ -30,7 +30,7 @@ class StocksController < ApplicationController
     else
       respond_to do |format|
         flash.now[:alert] = "Please enter a symbol to search."
-        format.js { render partial: "users/stock_result" }
+        format.js { render partial: "stocks/stock_result" }
       end
 
       # If not using JS.

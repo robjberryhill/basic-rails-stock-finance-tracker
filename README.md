@@ -38,6 +38,9 @@
   - `my_portfolio.html.erb`, `_stock_result.js.erb`, `stocks_controller.rb`
   - `remote: true`
 
+- Adding columns to devise and using them.
+  - `application_controller`, `user.rb`, `20200514015736_add_first_last_name_to_users.rb`
+
 * Based on course from Udemy: Instructors - Rob Percival & Mashrur Hossain
 
 ##### Notes
