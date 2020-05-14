@@ -6,10 +6,6 @@
 - Ruby version: 2.6.1
 - Rails version: 6.0.3
 
-- System dependencies
-
-- Configuration
-
 ### App Covers:
 
 - [Devise](https://rubygems.org/gems/devise/versions/4.2.0) Flexible authentication solution for Rails with Warden.
