@@ -1,7 +1,7 @@
-<h1><%= t('.sign_up') %></h1>
+<h1 class="col-6 mt-5 mx-auto"><%= t('.sign_up') %></h1>
 
 <div class="row">
-  <div class="col-6">
+  <div class="col-6 mx-auto">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= bootstrap_devise_error_messages! %>
 
