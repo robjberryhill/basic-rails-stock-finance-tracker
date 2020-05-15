@@ -1,0 +1,35 @@
+
+<div class="col-9 mx-auto mt-5">
+  <h1>User Details</h1>
+</div>
+
+<div class="card card-header col-9 mx-auto mt-3 mb-3">
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Name: </strong> <%= @user.full_name %></td>
+        <td><strong>Email: </strong> <%= @user.email %></td>
+        <td>
+          <%# If the current_user is not friends with the friend passed in... %>
+          <% if current_user.not_friends_with?(@user.id) %>
+            <%# Then show add friend button %>
+            <%= link_to "Add Friend?", friendships_path(friend: @user), class: "btn btn-sm btn-dark", method: :post %>
+          <%# Els if the current_user is friends with the friend then show friend %>
+          <% else %>
+            <div class="badge badge-secondary">
+              Friend
+            </div>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="col-9 mx-auto mb-5">
+  <% if !@tracked_stocks.empty? %>
+    <%= render "stocks/stock_list" %>
+  <% else %>
+    <p>Not currently tracking stocks.</p>
+  <% end %>
+</div>

@@ -44,4 +44,50 @@ class User < ApplicationRecord
     # Else return this string.
     "Anonymous"
   end
+
+  def self.search(param)
+    # strip the param being passed from the form of any spaces to the left or right
+    param.strip!
+    # create variable that will concatentate the matches.
+    # But only uniq matches not multiple for each method.
+    to_send_back = (first_name_matches(param) + last_name_matches(param) + email_matches(param)).uniq
+    return nil unless to_send_back
+
+    to_send_back
+  end
+
+  def self.first_name_matches(param)
+    # Match field first_name to passed in param from form.
+    matches("first_name", param)
+  end
+
+  def self.last_name_matches(param)
+    # Match field last_name to passed in param from form.
+    matches("last_name", param)
+  end
+
+  def self.email_matches(param)
+    # Match field email to passed in param from form.
+    matches("email", param)
+  end
+
+  def self.matches(field_name, param)
+    # Search the database for where a User field that is passed in field_name.
+    # if the the field is like the param passed in..
+    # Then this will return a record.
+    # The % is a wildcard that will search for the param with in any string.
+    # and not match exact string.
+    where("#{field_name} like ?", "%#{param}%")
+  end
+
+  def except_current_user(users)
+    # reject the user result if any of the users matches the current user id.
+    users.reject { |user| user.id == id }
+  end
+
+  # Taking in the id of a friend.
+  def not_friends_with?(id_of_friend)
+    # look at the Users friends and if the id if the friend passed in does not exist then return true.
+    !friends.where(id: id_of_friend).exists?
+  end
 end

@@ -1,0 +1,4 @@
+// Make sure to escape javascript with 'j' or escape_javascript()
+// This will select the div with the id="results" and inside the HTML...
+// render the stock_result.html.erb file.
+document.querySelector('#results').innerHTML = '<%= j render 'friends/friend_result.html' %>'

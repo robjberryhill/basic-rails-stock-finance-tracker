@@ -37,6 +37,10 @@
 - Adding columns to devise and using them.
   - `application_controller`, `user.rb`, `20200514015736_add_first_last_name_to_users.rb`
 
+- Searching multiple fields of a table.
+  - `user.rb`, `users_controller.rb`, `friendships_controller.rb`, `user_stocks_controller.rb`, `_friend_result.html.erb`, `_stock_result.html.erb`
+  - Using also create and build to add what is searched.
+
 * Based on course from Udemy: Instructors - Rob Percival & Mashrur Hossain
 
 ##### Notes
